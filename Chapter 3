@@ -1,0 +1,62 @@
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+
+	const int MAX_ITEMS = 10;
+	int numItems = 0;
+	int cont;
+	cout << "You have been banished from your city and are forced to find a new home elsewhere.\n";
+	cout << "You stand at the foot of a mountain.\n";
+	cout << "As you hike the mountain, you decide to check what you have with you.\n";
+	string inventory[MAX_ITEMS];
+	cout << "The only things you carry are:\n";
+	inventory[numItems++] = "Phone";
+	inventory[numItems++] = "Pocketknife";
+	inventory[numItems++] = "WalkingStick";
+	for(int i = 0; i < numItems; i++) {
+		cout << i + 1 << ". " << inventory[i] << endl;
+		}
+	cout << "press 1 then enter to continue: ";
+	cin >> cont;
+	cout << "As you continue your journey you come across a device that can tell which way is north.\n";
+	cout << "*Compass aquired!\n";
+	cout << "You are carrying:\n";
+	inventory[numItems++] = "Compass";
+	for(int i = 0; i < numItems; i++) {
+		cout << i + 1 << ". " << inventory[i] << endl;
+		}
+	cout << "press 1 then enter to continue: ";
+	cin >> cont;
+	cout << "Oh No! Thick spiderwebs block the path.\n";
+	cout << "You become entangled in the spiderwebs.\n";
+	cout << "Luckily you got out of it but you broke your pocketknife along the way.\n";
+	for(int i = 0; i < numItems; i++) 
+			if(inventory[i] == "Pocketknife") 
+				inventory[i] = "Broken Pocketknife";
+	for(int i = 0; i < numItems; i++) {
+		cout << i + 1 << ". " << inventory[i] << endl;
+		}
+	cout << "press 1 then enter to continue: ";
+	cin >> cont;
+	cout << "Wait whats that!?\n";
+	cout << "You come across an abandoned shack in the middle of the woods.\n";
+	cout << "Inside you find all sorts of tools and machinery. In the corner you see a gun, thinking that it may come in handy you take it with you.\n";
+	cout << "*gun aquired!\n";
+	cout << "You are carrying:\n";
+	inventory[numItems++] = "gun";
+	for(int i = 0; i < numItems; i++) {
+		cout << i + 1 << ". " << inventory[i] << endl;
+		}
+	cout << "press 1 then enter to continue: ";
+	cin >> cont;
+	cout <<  "You look around for ammunition and find one bullet.\n";
+	cout << "*1 Bullet aquired!\n";
+	cout << "You are carrying:\n";
+	inventory[numItems++] = "Bullet";
+	for(int i = 0; i < numItems; i++) {
+		cout << i + 1 << ". " << inventory[i] << endl;
+		}
